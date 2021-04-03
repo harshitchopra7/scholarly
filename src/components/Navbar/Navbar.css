@@ -1,0 +1,28 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap');
+.navbar {
+    display: flex;
+    padding: 40px 200px;
+    align-items: center;
+}
+.navbar_logo > p {
+    font-size: 30px;
+    font-weight: 500;
+}
+.navbar_login {
+    margin-left: auto;
+}
+.navbar_button {
+    background-color: #318CE7;
+    outline: none;
+    border-radius: 5px;
+    font-size: 18px;
+    color: white;
+    border: none;
+    text-decoration: none;
+    padding: 7px 8px;
+    cursor: pointer;
+}
+.navbar_button:hover {
+    font-size: 19px;
+    background-color: #007FFF;
+}
