@@ -1,0 +1,30 @@
+.nokeywords {
+    margin-left: 40px;
+    flex: 70%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    line-height: 40px;
+}
+.nokeywords_text > p {
+    font-size: 20px;
+    font-weight: 500 !important;
+}
+.nokeywords_button {
+    width: 170px;
+    margin-top: 25px;
+    background-color: #318CE7;
+    outline: none;
+    border-radius: 5px;
+    font-size: 17px;
+    color: white;
+    border: none;
+    text-decoration: none;
+    padding: 10px 10px;
+    text-align: center;
+    cursor: pointer;
+}
+.nokeywords_button:hover  {
+    font-size: 17.5px;
+}

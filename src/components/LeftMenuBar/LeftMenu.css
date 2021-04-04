@@ -1,0 +1,37 @@
+.leftmenubar {
+    display: flex;
+    height: 60vh;
+}
+.leftmenubar_left {
+    width: 200px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: whitesmoke;
+}
+.leftmenubar_left_name {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.leftmenubar_left_name > p {
+    margin-top: 15px;
+    font-size: 18px;
+}
+.leftmenubar_left_options {
+    margin-top: 100px;
+}
+.options_ {
+    display: flex;
+    margin: 15px 0;
+    cursor: pointer;
+    align-items: center;
+}
+.text-decoration {
+    text-decoration: none;
+}
+.option_p {
+    margin-left: 10px;
+    color: black;
+}

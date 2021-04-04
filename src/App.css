@@ -1,0 +1,5 @@
+.align_divs {
+  display: flex;
+  margin: 40px 200px;
+  height: 60vh;
+}
