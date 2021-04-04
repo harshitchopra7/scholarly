@@ -9,7 +9,7 @@ function LandingPage() {
             <div className="landingpage_left">
                 <p className="landingpage_title">Stay updated with research</p>
                 <p className="landingpage_subtitle">Keep up with all the latest research information in one place</p>
-                <Link to="/login">
+                <Link to="/no-keywords">
                     <button className="landingpage_button">GET STARTED</button>
                 </Link>
             </div>

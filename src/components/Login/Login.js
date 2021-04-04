@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './Login.css';
 import { GoogleLogin } from 'react-google-login';
 
@@ -16,6 +16,8 @@ function Login() {
         console.log('[Login Failed] res:', res);
     };
 
+    // const [signedIn, setSignedIn] = useState(false);
+
     return (
         <div>
             <GoogleLogin
@@ -24,7 +26,7 @@ function Login() {
                 onSuccess={onSuccess}
                 onFailure={onFailure}
                 cookiePolicy={'single_host_origin'}
-                isSignedIn={true}
+                // onclick={() => setSignedIn(true)}
             />,
         </div>
     )

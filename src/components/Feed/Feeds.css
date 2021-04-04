@@ -1,0 +1,10 @@
+.feeds {
+    padding: 15px 0;
+    background-color: white;
+}
+.feeds_title {
+    font-weight: 600;
+}
+.feeds_keyword {
+    margin-top: 30px;
+}

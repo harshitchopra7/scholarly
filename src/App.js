@@ -7,6 +7,7 @@ import Logout from './components/Login/Logout';
 import LeftMenuBar from './components/LeftMenuBar/LeftMenuBar';
 import AddKeywordsPage from './components/AddKeywordsPage/AddKeywordsPage';
 import NoKeywords from './components/NoKeywords/NoKeywords';
+import Feed from './components/Feed/Feed';
 
 function App() {
 
@@ -48,19 +49,22 @@ function App() {
               <LeftMenuBar />
               <AddKeywordsPage />
             </div>
-            
           </Route>
 
+          <Route path="/feed">
+            <Navbar />
+            <div className="align_divs">
+              <LeftMenuBar />
+              <Feed />
+            </div>
+          </Route>
 
-          {/* <Route path="/login">
-         <div class="g-signin2" data-onsuccess="onSignIn">
-           <button onClick={onSignIn}>
-             SignIn
-           </button>
-           <a href="https://www.google.com/" onclick={si}>Sign out</a>
-         </div>
-         {onSignIn ? <LandingPage /> : "Nothing"}
-        </Route> */}
+          
+
+
+          <Route path="/login">
+            <Login />
+          </Route>
 
         </Switch>
       </Router>

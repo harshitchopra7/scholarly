@@ -17,7 +17,7 @@ function LeftMenuBar() {
                 <div className="leftmenubar_left_options">
                     <p className="text-decoration" className="options_">
                         <FilterNoneIcon style={{color: "cornflowerblue"}} />
-                        <Link className="text-decoration" to="/add-keywords-page">
+                        <Link className="text-decoration" to="/feed">
                             <p className="option_p">Feed</p>
                         </Link>
                     </p>

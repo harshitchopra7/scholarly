@@ -1,0 +1,20 @@
+.feed {
+    margin-left: 40px;
+    display: flex;
+    width: 100%;
+}
+.feed_main {
+    flex: 700px;
+}
+.feed_meme {
+    flex: 30%;
+}
+.feed_meme_meme {
+    font-size: 25px;
+}
+.feed_relevant {
+    font-size: 25px;
+    font-weight: 500;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+}
