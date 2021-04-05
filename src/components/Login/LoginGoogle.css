@@ -1,0 +1,33 @@
+.logingoogle {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.logingoogle > button > img {
+    width: 50px;
+    margin-right: 10px;
+}
+.logingoogle > button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 280px;
+    /* background-color: #318CE7; */
+    outline: none;
+    border-radius: 5px;
+    font-size: 18px;
+    border: none;
+    text-decoration: none;
+    padding: 10px 10px;
+    text-align: center;
+    cursor: pointer;
+    font-weight: 600;
+}
+.logingoogle > button:hover {
+    width: 335px;
+    padding: 12px 50px;
+    background-color: #318CE7;
+    color: white;
+}

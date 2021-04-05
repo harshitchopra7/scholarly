@@ -1,0 +1,13 @@
+.meme {
+    width: 180px;
+    margin-left: 20px;
+}
+.meme > p {
+    font-size: 20px;
+    font-weight: 600 !important;
+    margin-bottom: 40px;
+}
+.meme > img {
+    width: 200px;
+    border-radius: 20px;
+}

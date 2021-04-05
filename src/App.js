@@ -1,47 +1,54 @@
 import './App.css';
-import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import { useEffect } from 'react';
+import { BrowserRouter as Router, Route, Switch, Link, Redirect } from "react-router-dom";
 import Navbar from './components/Navbar/Navbar';
 import LandingPage from './components/LandingPage/LandingPage';
-import Login from './components/Login/Login';
+import LoginGoogle from './components/Login/LoginGoogle';
 import Logout from './components/Login/Logout';
 import LeftMenuBar from './components/LeftMenuBar/LeftMenuBar';
 import AddKeywordsPage from './components/AddKeywordsPage/AddKeywordsPage';
 import NoKeywords from './components/NoKeywords/NoKeywords';
 import Feed from './components/Feed/Feed';
+import Meme from './components/Meme/Meme';
+import { useSelector } from 'react-redux';
+import { login, selectUser } from './components/features/userSlice';
+import { auth } from './firebase';
+
 
 function App() {
 
-  // function onSignIn(googleUser) {
-  //   var profile = googleUser.getBasicProfile();
-  //   console.log('ID: ' + profile.getId()); // Do not send to your backend! Use an ID token instead.
-  //   console.log('Name: ' + profile.getName());
-  //   console.log('Image URL: ' + profile.getImageUrl());
-  //   console.log('Email: ' + profile.getEmail()); // This is null if the 'email' scope is not present.
-  // }
+  const user = useSelector(selectUser);
 
-  // function signOut() {
-  //   var auth2 = gapi.auth2.getAuthInstance();
-  //   auth2.signOut().then(function () {
-  //     console.log('User signed out.');
-  //   });
-  // }
+  useEffect(() => {
+    auth.onAuthStateChanged(user => {
+      if (user) {
+        dispatchEvent(login({
+          displayName: user.displayName,
+          mail: user.email,
+          photoURL: user.photoURL
+        }))
+      }
+    })
+  }, [])
 
   return (
-    <div className="app">
-      <Router>
-        <Switch>
-          <Route exact path="/">
+    <Router>
+      <Route exact path="/">
             <Navbar />
             <LandingPage />
           </Route>
+      {!user ? (
+        <LoginGoogle />
+      ) : (
+        <div className="app">
 
           <Route path="/no-keywords">
-          <Navbar />
+            <Navbar />
             <div className="align_divs">
               <LeftMenuBar />
               <NoKeywords />
             </div>
-          </Route>            
+          </Route>
 
           <Route path="/add-keywords-page">
             <Navbar />
@@ -56,20 +63,18 @@ function App() {
             <div className="align_divs">
               <LeftMenuBar />
               <Feed />
+              <Meme />
             </div>
           </Route>
+          </div>
 
-          
+
+      )};
+    </Router>
 
 
-          <Route path="/login">
-            <Login />
-          </Route>
 
-        </Switch>
-      </Router>
-    </div>
-  );
+      );
 }
 
 export default App;

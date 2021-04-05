@@ -1,6 +1,7 @@
 .feeds {
     padding: 15px 0;
     background-color: white;
+    cursor: pointer;
 }
 .feeds_title {
     font-weight: 600;

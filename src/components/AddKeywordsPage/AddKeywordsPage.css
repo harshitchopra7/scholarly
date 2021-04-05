@@ -1,19 +1,49 @@
 .addkeywordspage {
-    margin-left: 40px;
+    margin-left: 250px;
+    height: 70vh;
+    width: 700px;
+    overflow-y: scroll;
+    padding-right: 40px;
 }
 .addkeywordspage_keywords {
     font-size: 20px;
     font-weight: 600 !important;
 }
+.over {
+    display: flex;
+    flex-wrap: wrap;
+    overflow-y: scroll;
+}
 .addkeywordspage_textfield {
     margin-top: 30px;
 }
-.addkeywordspage_button { 
+.addkeywordspage_button1 {
     display: flex;
-    margin-top: 150px;
     justify-content: flex-end;
 }
-.addkeywordspage_button > button {
+.addkeywordspage_button1 > button {
+    margin-top: 20px;
+    background-color: #318CE7;
+    outline: none;
+    border-radius: 5px;
+    font-size: 18px;
+    color: white;
+    border: none;
+    text-decoration: none;
+    padding: 7px 10px;
+    cursor: pointer;
+}
+.addkeywordspage_button1 > button:hover {
+    font-size: 19px;
+    background-color: #007FFF;
+}
+.addkeywordspage_button2 { 
+    display: flex;
+    margin-top: 100px;
+    justify-content: flex-end;
+    text-decoration: none;
+}
+.addkeywordspage_button2 > button {
     width: 170px;
     margin-top: 25px;
     background-color: #318CE7;

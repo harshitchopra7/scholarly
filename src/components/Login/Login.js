@@ -16,18 +16,25 @@ function Login() {
         console.log('[Login Failed] res:', res);
     };
 
+    const [name, setName] = useState("");
+
+    const responseGoogle = response => {
+        setName(response.profileObj.name);
+    };
+
     // const [signedIn, setSignedIn] = useState(false);
 
     return (
         <div>
-            <GoogleLogin
+            {!name && <GoogleLogin
                 clientId="2519917737-d9hlpd2fq2vbo6pp83rs2k9cetc1ahju.apps.googleusercontent.com"
                 buttonText="Login"
-                onSuccess={onSuccess}
-                onFailure={onFailure}
+                onSuccess={responseGoogle}
+                onFailure={responseGoogle}
                 cookiePolicy={'single_host_origin'}
                 // onclick={() => setSignedIn(true)}
-            />,
+            />
+            }
         </div>
     )
 }

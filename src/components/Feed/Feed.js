@@ -14,9 +14,6 @@ function Feed() {
                     ))}
                 </div>
             </div>
-            <div className="feed_meme">
-                <p className="feed_meme_meme">Meme corner</p>
-            </div>
         </div>
     )
 }

@@ -1,17 +1,34 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import "./LeftMenu.css";
 import Avatar from '@material-ui/core/Avatar';
 import ExitToAppIcon from '@material-ui/icons/ExitToApp';
 import ReorderIcon from '@material-ui/icons/Reorder';
 import FilterNoneIcon from '@material-ui/icons/FilterNone';
 import { Link } from 'react-router-dom';
+import image from '../images/1.jpeg';
+import { useSelector } from 'react-redux';
+import { logout, selectUser } from '../features/userSlice';
+import { auth } from '../../firebase';
+import { useDispatch } from 'react-redux';
 
 function LeftMenuBar() {
+
+    const dispatch = useDispatch()
+
+	const user = useSelector(selectUser);
+
+	const signOut=()=>{
+		auth.signOut().then(()=>{
+			dispatch(logout())
+		})
+	}
+
+
     return (
         <div className="leftmenubar">
             <div className="leftmenubar_left">
                 <div className="leftmenubar_left_name">
-                    <Avatar style={{width: '70px', height: '70px'}} />
+                    <img src={image} alt="" />
                     <p>Ankit Agrawal</p>
                 </div>
                 <div className="leftmenubar_left_options">
@@ -29,7 +46,7 @@ function LeftMenuBar() {
                     </p>
                     <p className="options_">
                         <ExitToAppIcon style={{color: "cornflowerblue"}} />
-                        <Link className="text-decoration" to="/add-keywords-page">
+                        <Link to="/" className="text-decoration" onClick={signOut}>
                             <p className="option_p">Logout</p>
                         </Link>
                     </p>

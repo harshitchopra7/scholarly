@@ -1,6 +1,7 @@
 .leftmenubar {
     display: flex;
-    height: 60vh;
+    height: 70vh;
+    position: fixed;
 }
 .leftmenubar_left {
     width: 200px;
@@ -14,6 +15,11 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+}
+.leftmenubar_left_name > img {
+    border-radius: 50%;
+    width: 70px;
+    height: 70px;
 }
 .leftmenubar_left_name > p {
     margin-top: 15px;
