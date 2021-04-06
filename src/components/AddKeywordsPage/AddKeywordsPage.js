@@ -14,15 +14,15 @@ function AddKeywordsPage() {
     const [input, setInput] = useState('');
 
     useEffect(() => {
-        db.collection('keywordTag').orderBy('timestamp', 'desc').onSnapshot((snapshot) => 
-        setKeywordTag(
-            snapshot.docs.map((doc) => (
-                {
-                    id: doc.id,
-                    data: doc.data()
-                }
+        db.collection('keywordTag').orderBy('timestamp', 'desc').onSnapshot((snapshot) =>
+            setKeywordTag(
+                snapshot.docs.map((doc) => (
+                    {
+                        id: doc.id,
+                        data: doc.data()
+                    }
+                ))
             ))
-        ))
     }, [])
 
     const addKeywordTag = (e) => {
@@ -39,28 +39,30 @@ function AddKeywordsPage() {
     return (
         <div className="addkeywordspage">
             <p className="addkeywordspage_keywords">Keywords</p>
-            <div className="addkeywordspage_textfield">
-                <TextField 
-                    value={input}
-                    onChange={e => setInput(e.target.value)}
-                    style={{width: '500px'}}
-                    id="outlined-basic" 
-                    label="Search your keywords" 
-                    variant="outlined" 
-                />
-            </div>
-            <div className="addkeywordspage_button1">
-                <button onClick={addKeywordTag}>Add</button>
+            <div className="addkeywordspage_flex">
+                <div className="addkeywordspage_textfield">
+                    <TextField
+                        value={input}
+                        onChange={e => setInput(e.target.value)}
+                        style={{ width: '500px' }}
+                        id="outlined-basic"
+                        label="Search your keywords"
+                        variant="outlined"
+                    />
+                </div>
+                <div className="addkeywordspage_button1">
+                    <button onClick={addKeywordTag}>Add</button>
+                </div>
             </div>
             <div className="over">
-                {keywordTag.map(({id, data: { keyword }}) => (
+                {keywordTag.map(({ id, data: { keyword } }) => (
                     <AddedKeywords
-                    key={id}
-                    keyword={keyword}
+                        key={id}
+                        keyword={keyword}
                     />
                 ))}
             </div>
-            
+
             {/* <div>
                 <AddedKeywords keyword="Metal organic frameworks" />
                 <AddedKeywords keyword="Adsorption" />

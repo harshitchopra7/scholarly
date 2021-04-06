@@ -17,12 +17,13 @@
 .addkeywordspage_textfield {
     margin-top: 30px;
 }
-.addkeywordspage_button1 {
+.addkeywordspage_flex {
     display: flex;
-    justify-content: flex-end;
+    align-items: center;
 }
 .addkeywordspage_button1 > button {
-    margin-top: 20px;
+    margin-top: 30px;
+    margin-left: 20px;
     background-color: #318CE7;
     outline: none;
     border-radius: 5px;

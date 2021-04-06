@@ -36,11 +36,11 @@ function App() {
   return (
     <Router>
       <Route exact path="/">
-            <Navbar />
-            <LandingPage />
-          </Route>
+        <Navbar />
+        <LandingPage />
+      </Route>
       {!user ? (
-        <LoginGoogle />
+        <Route path="/no-keywords"><LoginGoogle /></Route>
       ) : (
         <div className="app">
 

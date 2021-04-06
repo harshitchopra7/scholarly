@@ -19,7 +19,7 @@ function LoginGoogle() {
             }))
         }).catch(error => alert(error.message));
     };
-
+    
     return (
         <div className="logingoogle">
             
