@@ -10,9 +10,11 @@ import AddKeywordsPage from './components/AddKeywordsPage/AddKeywordsPage';
 import NoKeywords from './components/NoKeywords/NoKeywords';
 import Feed from './components/Feed/Feed';
 import Meme from './components/Meme/Meme';
+import ContentPage from './components/ContentPage/ContentPage';
 import { useSelector } from 'react-redux';
 import { login, selectUser } from './components/features/userSlice';
 import { auth } from './firebase';
+
 
 
 function App() {
@@ -66,6 +68,16 @@ function App() {
               <Meme />
             </div>
           </Route>
+
+          <Route path="/content">
+            <Navbar />
+            <div className="align_divs">
+              <LeftMenuBar />
+              <ContentPage />
+              <Meme />
+            </div>
+          </Route>
+
           </div>
 
 

@@ -1,0 +1,27 @@
+.contentpage {
+    margin-left: 250px;
+    padding-right: 15px;
+    width: 700px;
+    height: 70vh;
+    overflow: scroll;
+}
+.contentpage_title > p {
+    font-weight: 600;
+    font-size: 23px;
+}
+.contentpage_abstract > p {
+    margin-top: 20px;
+    font-size: 22px;
+}
+.contentpage_content > p {
+    margin-top: 20px;
+    font-size: 18px;
+}
+.contentpage_getit > p {
+    color: #318CE7;
+    font-size: 23px;
+    margin-top: 20px;
+    text-align: center;
+    text-decoration: underline;
+    cursor: pointer;
+} 

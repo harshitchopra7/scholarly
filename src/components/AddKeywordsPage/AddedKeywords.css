@@ -9,3 +9,7 @@
 .addedkeywords > p {
     padding: 0 10px;
 }
+.close {
+    cursor: pointer;
+    padding-right: 10px;
+}

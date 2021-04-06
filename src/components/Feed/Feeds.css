@@ -5,7 +5,13 @@
 }
 .feeds_title {
     font-weight: 600;
+    text-decoration: none;
 }
 .feeds_keyword {
     margin-top: 30px;
+    text-decoration: none;
+}
+.text-decoration {
+    text-decoration: none;
+    color: black;
 }
