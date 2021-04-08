@@ -98,7 +98,7 @@ function App() {
             <div className="align_divs">
               <LeftMenuBar />
               <Feed />
-              <Meme />
+              {/* <Meme /> */}
             </div>
           </Route>
 
@@ -107,7 +107,7 @@ function App() {
             <div className="align_divs">
               <LeftMenuBar />
               <ContentPage />
-              <Meme />
+              {/* <Meme /> */}
             </div>
           </Route>
 
