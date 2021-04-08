@@ -39,9 +39,9 @@ function App() {
         <Navbar />
         <LandingPage />
       </Route>
-      {/* {!user ? (
+      {!user ? (
         <Route path="/no-keywords"><LoginGoogle /></Route>
-      ) : ( */}
+      ) : (
         <div className="app">
 
           <Route path="/no-keywords">
@@ -81,7 +81,7 @@ function App() {
           </div>
 
 
-      {/* )}; */}
+      )};
     </Router>
 
 

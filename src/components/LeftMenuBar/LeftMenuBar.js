@@ -28,8 +28,8 @@ function LeftMenuBar() {
         <div className="leftmenubar">
             <div className="leftmenubar_left">
                 <div className="leftmenubar_left_name">
-                    {/* <Avatar src={user.photoURL} alt="" />
-                    <p>{user.displayName}</p> */}
+                    <Avatar src={user.photoURL} alt="" />
+                    <p>{user.displayName}</p>
                 </div>
                 <div className="leftmenubar_left_options">
                     <p className="text-decoration" className="options_">
