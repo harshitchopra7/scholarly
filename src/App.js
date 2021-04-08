@@ -39,9 +39,9 @@ function App() {
         <Navbar />
         <LandingPage />
       </Route>
-      {!user ? (
+      {/* {!user ? (
         <Route path="/no-keywords"><LoginGoogle /></Route>
-      ) : (
+      ) : ( */}
         <div className="app">
 
           <Route path="/no-keywords">
@@ -65,7 +65,7 @@ function App() {
             <div className="align_divs">
               <LeftMenuBar />
               <Feed />
-              <Meme />
+              {/* <Meme /> */}
             </div>
           </Route>
 
@@ -74,14 +74,14 @@ function App() {
             <div className="align_divs">
               <LeftMenuBar />
               <ContentPage />
-              <Meme />
+              {/* <Meme /> */}
             </div>
           </Route>
 
           </div>
 
 
-      )};
+      {/* )}; */}
     </Router>
 
 

@@ -1,9 +1,15 @@
-.addkeywordspage {
+.addkeywordspage_main {
+    display: flex;
     margin-left: 250px;
-    height: 70vh;
     width: 700px;
+    height: 70vh;
+}
+.addkeywordspage {
+    width: 600px;
     overflow-y: scroll;
-    padding-right: 40px;
+    padding-right: 20px;
+    margin-left: 20px;
+    box-shadow: 10px 10px whitesmoke;
 }
 .addkeywordspage_keywords {
     font-size: 20px;
@@ -13,6 +19,9 @@
     display: flex;
     flex-wrap: wrap;
     overflow-y: scroll;
+}
+.addkeywordspage_feed {
+    margin-top: 30px;
 }
 .addkeywordspage_textfield {
     margin-top: 30px;
@@ -60,4 +69,27 @@
 }
 .addkeywordspage_button > button:hover {
     font-size: 18px;
+    margin-left: 20px;
+}
+.add_feed_button {
+    display: flex;
+    align-items: center;
+}
+.add_feed_button > button {
+    margin-top: 30px;
+    margin-left: 20px;
+    background-color: #318CE7;
+    outline: none;
+    border-radius: 5px;
+    font-size: 16px;
+    color: white;
+    border: none;
+    text-decoration: none;
+    width: 100px;
+    padding: 7px 10px;
+    cursor: pointer;
+}
+.add_feed_button_button > button:hover {
+    font-size: 18px;
+    margin-left: 20px;
 }

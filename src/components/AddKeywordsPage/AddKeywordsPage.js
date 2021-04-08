@@ -12,6 +12,7 @@ function AddKeywordsPage() {
 
     const [keywordTag, setKeywordTag] = useState([]);
     const [input, setInput] = useState('');
+    const [feedInput, setFeedInput] = useState('');
 
     useEffect(() => {
         db.collection('keywordTag').orderBy('timestamp', 'desc').onSnapshot((snapshot) =>
@@ -36,17 +37,46 @@ function AddKeywordsPage() {
         setInput("");
     };
 
+        const addFeed = (eve) => {
+            eve.preventDefault();
+            console.log(setFeedInput);
+            setFeedInput("");
+            setKeywordTag([]);
+            alert("Feed added successfully");
+        }
+
+    // const newFeed = () => {
+    //     var x = document.getElementById("o");
+    //     x.remove();
+    // }
+
     return (
+        <div className="addkeywordspage_main">
+
+        
         <div className="addkeywordspage">
+        <div>
             <p className="addkeywordspage_keywords">Keywords</p>
+            <div className="addkeywordspage_feed">
+            <TextField
+                        value={feedInput}
+                        onChange={eve => setFeedInput(eve.target.value)}
+                        style={{ width: '300px' }}
+                        id="outlined-basic"
+                        label="Add Feed Name"
+                        variant="outlined"
+                    />
+            </div>
+
             <div className="addkeywordspage_flex">
                 <div className="addkeywordspage_textfield">
+                    
                     <TextField
                         value={input}
                         onChange={e => setInput(e.target.value)}
-                        style={{ width: '500px' }}
+                        style={{ width: '400px' }}
                         id="outlined-basic"
-                        label="Search your keywords"
+                        label="Add phrases"
                         variant="outlined"
                     />
                 </div>
@@ -70,6 +100,13 @@ function AddKeywordsPage() {
             <div>
                 <Link className="addkeywordspage_button2" to="/feed"><button>Go to feed</button></Link>
             </div>
+        </div>
+        </div>
+        <div className="add_feed_button">
+        <button onClick={addFeed}>Add Feed</button>
+
+        </div>
+            
         </div>
     )
 }
