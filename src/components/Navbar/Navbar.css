@@ -1,32 +1,50 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap');
-.navbar {
-    display: flex;
-    padding: 40px 150px;
-    align-items: center;
+@import url('https://fonts.googleapis.com/css2?family=Architects+Daughter&display=swap');
+
+
+.nav_main {
     position: sticky;
-    background-color: white;
     top: 0;
+    background-color: white;
     z-index: 1;
 }
+.navbar {
+    display: flex;
+    padding:  30px 150px;
+    align-items: center;
+    
+}
 .navbar_logo > p {
-    font-size: 30px;
+    font-size: 40px;
     font-weight: 500 !important;
+    font-family: 'Architects Daughter', cursive !important;
 }
 .navbar_login {
     margin-left: auto;
 }
 .navbar_button {
-    background-color: #318CE7;
+    /* background-color: #318CE7; */
+    background-color: green;
     outline: none;
     border-radius: 5px;
     font-size: 18px;
     color: white;
     border: none;
     text-decoration: none;
-    padding: 7px 8px;
+    padding: 10px 14px;
     cursor: pointer;
 }
 .navbar_button:hover {
     font-size: 19px;
-    background-color: #007FFF;
+    /* background-color: #007FFF; */
+}
+.hr {
+    border: 1px solid black;
+    margin: 0 150px;
+}
+.hr_line {
+    border: 1px solid black;
+    margin-top: 120px;
+    margin-left: 150px;
+    margin-right: 150px;
 }

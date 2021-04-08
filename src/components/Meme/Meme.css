@@ -1,6 +1,7 @@
 .meme {
     width: 180px;
     margin-left: 20px;
+    margin-top: 40px;
 }
 .meme > p {
     font-size: 20px;

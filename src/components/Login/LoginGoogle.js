@@ -4,6 +4,7 @@ import { useDispatch } from 'react-redux';
 import { auth, provider } from '../../firebase';
 import { login } from '../features/userSlice';
 import google from '../images/google.png';
+import { Link } from 'react-router-dom';
 
 function LoginGoogle() {
 
@@ -15,7 +16,8 @@ function LoginGoogle() {
             dispatch(login({
                 displayName: user.displayName,
                 email: user.email,
-                photoURL: user.photURL
+                photoUrl: user.photURL,
+                uid: user.uid
             }))
         }).catch(error => alert(error.message));
     };
@@ -23,7 +25,7 @@ function LoginGoogle() {
     return (
         <div className="logingoogle">
             
-            <button onClick={signIn}><img src={google} alt="" />Login with Google</button>
+            <button className="lg_button" onClick={signIn}><Link className="text-decoration" to="/no-keywords"><img className="lg_img" src={google} alt="" />Login with Google</Link></button>
         </div>
     )
 }

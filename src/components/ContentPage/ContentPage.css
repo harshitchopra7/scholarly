@@ -4,6 +4,7 @@
     width: 700px;
     height: 70vh;
     overflow: scroll;
+    margin-top: 40px;
 }
 .contentpage_title > p {
     font-weight: 600;
@@ -15,10 +16,12 @@
 }
 .contentpage_content > p {
     margin-top: 20px;
-    font-size: 18px;
+    font-size: 16px;
+    line-height: 30px;
 }
 .contentpage_getit > p {
-    color: #318CE7;
+    /* color: #318CE7; */
+    color: green;
     font-size: 23px;
     margin-top: 20px;
     text-align: center;

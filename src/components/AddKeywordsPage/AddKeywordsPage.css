@@ -3,6 +3,7 @@
     margin-left: 250px;
     width: 700px;
     height: 70vh;
+    margin-top: 40px;
 }
 .addkeywordspage {
     width: 600px;
@@ -33,7 +34,7 @@
 .addkeywordspage_button1 > button {
     margin-top: 30px;
     margin-left: 20px;
-    background-color: #318CE7;
+    background-color: green;
     outline: none;
     border-radius: 5px;
     font-size: 18px;
@@ -45,7 +46,7 @@
 }
 .addkeywordspage_button1 > button:hover {
     font-size: 19px;
-    background-color: #007FFF;
+    background-color: green;
 }
 .addkeywordspage_button2 { 
     display: flex;
@@ -56,7 +57,7 @@
 .addkeywordspage_button2 > button {
     width: 170px;
     margin-top: 25px;
-    background-color: #318CE7;
+    background-color: green;
     outline: none;
     border-radius: 5px;
     font-size: 17px;
@@ -78,7 +79,7 @@
 .add_feed_button > button {
     margin-top: 30px;
     margin-left: 20px;
-    background-color: #318CE7;
+    background-color: green;
     outline: none;
     border-radius: 5px;
     font-size: 16px;

@@ -2,12 +2,20 @@
     margin-left: 250px;
     display: flex;
     width: 700px;
-    height: 70vh;
-    overflow: scroll;
+    margin-top: 40px;
+    /* height: 70vh; */
+    /* overflow: scroll; */
 }
 .feed_relevant {
     font-size: 25px;
     font-weight: 500;
-    text-transform: uppercase;
+    /* text-transform: uppercase; */
     margin-bottom: 10px;
+}
+.top_recommendations {
+    padding:  0 10px;
+    border: 2px solid green;
+}
+.all_feed {
+    padding: 0 10px;
 }

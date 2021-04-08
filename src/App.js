@@ -1,6 +1,7 @@
 import './App.css';
 import { useEffect } from 'react';
 import { BrowserRouter as Router, Route, Switch, Link, Redirect } from "react-router-dom";
+import NavbarNew from './components/Navbar/NavbarNew';
 import Navbar from './components/Navbar/Navbar';
 import LandingPage from './components/LandingPage/LandingPage';
 import LoginGoogle from './components/Login/LoginGoogle';
@@ -11,20 +12,22 @@ import NoKeywords from './components/NoKeywords/NoKeywords';
 import Feed from './components/Feed/Feed';
 import Meme from './components/Meme/Meme';
 import ContentPage from './components/ContentPage/ContentPage';
-import { useSelector } from 'react-redux';
+import { useSelector, useDispatch } from 'react-redux';
 import { login, selectUser } from './components/features/userSlice';
 import { auth } from './firebase';
+import video from './components/video/Scholarlys_Demo.mp4';
 
 
 
 function App() {
 
   const user = useSelector(selectUser);
+  const dispatch = useDispatch();
 
   useEffect(() => {
     auth.onAuthStateChanged(user => {
       if (user) {
-        dispatchEvent(login({
+        dispatch(login({
           displayName: user.displayName,
           mail: user.email,
           photoURL: user.photoURL
@@ -39,8 +42,38 @@ function App() {
         <Navbar />
         <LandingPage />
       </Route>
-      {!user ? (
-        <Route path="/no-keywords"><LoginGoogle /></Route>
+      {(!user)  ? (
+        <Route path="/no-keywords">
+          {/* <div>
+            <div className="log_google_main">
+              <Navbar />
+              <div className="landingpage_top mar">
+                <p>Keep up with the latest research information, All in one place</p>
+              </div>
+              <div className="landingpage_mid mar">
+                  <p>Scholarlys collects information from various sources and gives you updates on what’s happening in your research field.</p>
+              </div>
+              <div className="vidd">
+                <video src={video} />
+              </div>
+              
+            </div>
+            <div id="popupp">
+                <div className="crosss_main">
+                    <p className="crosss">&times;</p>
+                </div>
+                <div className="welcomes_main">
+                    <p className="welcomes">Welcome to Scholarlys</p>
+                </div>
+                <div className="login_googles">
+                    <LoginGoogle />
+                </div>
+            </div>
+          </div> */}
+          <div className="demo">
+            <LoginGoogle />
+          </div>
+        </Route>
       ) : (
         <div className="app">
 
@@ -65,7 +98,7 @@ function App() {
             <div className="align_divs">
               <LeftMenuBar />
               <Feed />
-              {/* <Meme /> */}
+              <Meme />
             </div>
           </Route>
 
@@ -74,7 +107,7 @@ function App() {
             <div className="align_divs">
               <LeftMenuBar />
               <ContentPage />
-              {/* <Meme /> */}
+              <Meme />
             </div>
           </Route>
 

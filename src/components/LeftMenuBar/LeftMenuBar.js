@@ -23,29 +23,34 @@ function LeftMenuBar() {
 		})
 	}
 
+    console.log(user.photoUrl);
+    console.log(user.displayName);
+
 
     return (
         <div className="leftmenubar">
             <div className="leftmenubar_left">
                 <div className="leftmenubar_left_name">
-                    <Avatar src={user.photoURL} alt="" />
+                    <Avatar src={user.photoURL} style={{width: '120px', height: '120px'}} alt="" />
                     <p>{user.displayName}</p>
+                    {/* <Avatar src='' alt="" />
+                    <p>Harshit Chopra</p> */}
                 </div>
                 <div className="leftmenubar_left_options">
                     <p className="text-decoration" className="options_">
-                        <FilterNoneIcon style={{color: "cornflowerblue"}} />
+                        <FilterNoneIcon style={{color: "green"}} />
                         <Link className="text-decoration" to="/feed">
                             <p className="option_p">Feed</p>
                         </Link>
                     </p>
                     <p className="options_">
-                        <ReorderIcon style={{color: "cornflowerblue"}} />
+                        <ReorderIcon style={{color: "green"}} />
                         <Link className="text-decoration" to="/add-keywords-page">
                             <p className="option_p">Keywords</p>
                         </Link>
                     </p>
                     <p className="options_">
-                        <ExitToAppIcon style={{color: "cornflowerblue"}} />
+                        <ExitToAppIcon style={{color: "green"}} />
                         <Link to="/" className="text-decoration" onClick={signOut}>
                             <p className="option_p">Logout</p>
                         </Link>

@@ -2,6 +2,7 @@
     display: flex;
     height: 70vh;
     position: fixed;
+    margin-top: 40px;
 }
 .leftmenubar_left {
     width: 200px;
