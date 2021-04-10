@@ -24,7 +24,7 @@
 }
 .navbar_button {
     /* background-color: #318CE7; */
-    background-color: green;
+    background-color: #4285F4;
     outline: none;
     border-radius: 5px;
     font-size: 18px;
@@ -41,10 +41,91 @@
 .hr {
     border: 1px solid black;
     margin: 0 150px;
+    border: 1px solid lightgray;
 }
 .hr_line {
-    border: 1px solid black;
+    border: 1px solid lightgray;
     margin-top: 120px;
     margin-left: 150px;
     margin-right: 150px;
+}
+
+
+.nav_pop {
+    margin-top: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.nav_pop_button {
+    background-color: #318CE7;
+    outline: none;
+    border-radius: 5px;
+    font-size: 20px;
+    color: white;
+    border: none;
+    text-decoration: none;
+    padding: 10px 11px;
+    cursor: pointer;
+}
+.popup_button:hover {
+    font-size: 22px;
+    /* background-color: #007FFF; */
+} 
+
+.popup_container {
+    background-color: white;
+    width: 400px;
+    height: 500px;
+}
+
+#nav_popupp{
+    position: fixed;
+    top: 40%; 
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 350px;
+    height: 450px;
+    box-shadow: 0 5px 30px rgba(0,0,0,0.30);
+    /* background-color: #ACE1AF; */
+    background-color: white;
+    visibility: hidden;  
+    opacity: 0;
+    transition: 0.5s;
+    padding: 10px;
+}
+#nav_popupp.active {
+    top: 50%;
+    visibility: visible;
+    opacity: 1;
+    transition: 0.5s;
+}
+.landingp#blur.active {
+    filter: blur(20px);
+    pointer-events: none;
+    user-select: none;
+}
+.cross_mainn {
+    text-align: right;
+    font-size: 35px;
+}
+.crosss {
+    cursor: pointer;
+}
+.welcome_mainn {
+    width: 100%;
+    height: 140px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.welcomee {
+    font-size: 32px;
+}
+.login_googlee {
+    margin-top: 50px;
+}
+.foot {
+    text-align: center;
+    margin-top: 20px;
 }

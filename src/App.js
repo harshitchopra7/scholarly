@@ -39,7 +39,7 @@ function App() {
   return (
     <Router>
       <Route exact path="/">
-        <Navbar />
+        {/* <Navbar /> */}
         <LandingPage />
       </Route>
       {(!user)  ? (
@@ -70,9 +70,7 @@ function App() {
                 </div>
             </div>
           </div> */}
-          <div className="demo">
-            <LoginGoogle />
-          </div>
+            <LandingPage />
         </Route>
       ) : (
         <div className="app">
@@ -89,16 +87,16 @@ function App() {
             <Navbar />
             <div className="align_divs">
               <LeftMenuBar />
-              <AddKeywordsPage />
+              {/* <AddKeywordsPage /> */}
             </div>
           </Route>
 
           <Route path="/feed">
             <Navbar />
-            <div className="align_divs">
+            <div className="align_divs">    
               <LeftMenuBar />
               <Feed />
-              {/* <Meme /> */}
+              <Meme />
             </div>
           </Route>
 
@@ -107,7 +105,7 @@ function App() {
             <div className="align_divs">
               <LeftMenuBar />
               <ContentPage />
-              {/* <Meme /> */}
+              <Meme />
             </div>
           </Route>
 

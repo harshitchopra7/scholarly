@@ -1,14 +1,18 @@
 import React from 'react';
 import './LoginGoogle.css';
-import { useDispatch } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import { auth, provider } from '../../firebase';
-import { login } from '../features/userSlice';
+import { login, selectUser } from '../features/userSlice';
 import google from '../images/google.png';
-import { Link } from 'react-router-dom';
+import { Link, useHistory } from 'react-router-dom';
 
 function LoginGoogle() {
 
     const dispatch = useDispatch();
+
+    const history = useHistory();
+
+    
 
     const signIn = () => {
         auth.signInWithPopup(provider) 
@@ -21,6 +25,17 @@ function LoginGoogle() {
             }))
         }).catch(error => alert(error.message));
     };
+
+    // const user = useSelector(selectUser);
+
+    // const push = () => {
+    //     if(user)  {
+    //         history.push("/no-keywords");
+    //     }
+    //         else {
+    //         history.push("/");
+    //     }
+    // }
     
     return (
         <div className="logingoogle">

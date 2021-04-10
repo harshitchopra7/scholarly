@@ -27,7 +27,7 @@
     font-size: 18px;
 }
 .leftmenubar_left_options {
-    margin-top: 100px;
+    margin-top: 50px;
 }
 .options_ {
     display: flex;
@@ -41,4 +41,54 @@
 .option_p {
     margin-left: 10px;
     color: black;
+}
+.foo {
+    margin-top: 220px;
+}
+
+#popuppp {
+    position: fixed;
+    top: 40%; 
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 710px;
+    height: 440px;
+    box-shadow: 0 5px 30px rgba(0,0,0,0.30);
+    /* background-color: #ACE1AF; */
+    background-color: white;
+    visibility: hidden;  
+    opacity: 0;
+    transition: 0.5s;
+    padding: 10px;
+}
+#popuppp.active {
+    top: 50%;
+    visibility: visible;
+    opacity: 1;
+    transition: 0.5s;
+}
+#blur.active {
+    filter: blur(2px);
+    pointer-events: none;
+    user-select: none;
+}
+.cross_mainn {
+    text-align: right;
+    font-size: 35px;
+}
+.crosss {
+    cursor: pointer;
+}
+.welcome_mainn {
+    width: 100%;
+    height: 140px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.welcomee {
+    font-size: 32px;
+}
+.login_google {
+    margin-top: 50px;
 }

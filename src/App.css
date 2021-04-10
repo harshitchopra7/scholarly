@@ -13,7 +13,6 @@ body {
 .align_divs {
   display: flex;
   margin: 0px 150px;
-  height: 60vh;
 }
 .log_google_main {
   height: 100vh;

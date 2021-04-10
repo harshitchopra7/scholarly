@@ -14,6 +14,9 @@ function Feed() {
                         <Feeds title={topData.title} keyword={topData.keyword} />
                     ))}
                 </div>
+                <div className="today">
+                    <p>Today</p>
+                </div>
                 <div className="all_feed">
                     {feedData.map((feedData) => (
                         <Feeds title={feedData.title} keyword={feedData.keyword} />

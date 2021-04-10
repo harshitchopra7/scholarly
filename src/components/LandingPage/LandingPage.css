@@ -22,6 +22,7 @@
     padding-top: 35px;
     font-size: 20px;
     font-weight: 500;
+    color: #4285F4;
 }
 .landingpage_button {
     width: 170px;
@@ -53,17 +54,17 @@
 
 
 .landingpage_top {
-    font-size: 42px;
+    font-size: 38px;
     font-weight: 700 !important;
     text-align: center;
     position: relative;
 }
 .landingpage_mid {
-    margin-top: 40px;
-    font-size: 30px;
+    margin-top: 20px;
+    font-size: 25px;
     text-align: center;
-    font-weight: 500 !important;
-    line-height: 50px;
+    /* font-weight: 500 !important; */
+    /* line-height: 50px; */
 }
 .vid {
     margin-top: 20px;
@@ -87,7 +88,7 @@
 }
 .trigger_button {
     /* background-color: #318CE7; */
-    background-color: green;
+    background-color: #318CE7;
     outline: none;
     border-radius: 5px;
     font-size: 20px;
@@ -176,7 +177,7 @@
     justify-content: center;
 }
 .popup_button {
-    background-color: green;
+    background-color: #318CE7;
     outline: none;
     border-radius: 5px;
     font-size: 20px;
@@ -205,7 +206,8 @@
     width: 350px;
     height: 450px;
     box-shadow: 0 5px 30px rgba(0,0,0,0.30);
-    background-color: #ACE1AF;
+    /* background-color: #ACE1AF; */
+    background-color: white;
     visibility: hidden;  
     opacity: 0;
     transition: 0.5s;
@@ -241,4 +243,8 @@
 }
 .login_google {
     margin-top: 50px;
+}
+.foot {
+    text-align: center;
+    margin-top: 20px;
 }

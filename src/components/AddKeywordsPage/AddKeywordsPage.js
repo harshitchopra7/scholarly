@@ -3,16 +3,18 @@ import "./AddKeywordsPage.css";
 import './AddedKeywords';
 import TextField from '@material-ui/core/TextField';
 import AddedKeywords from './AddedKeywords';
-import { Link } from 'react-router-dom';
+import { Link, useHistory } from 'react-router-dom';
 
 import { db } from '../../firebase';
 import firebase from 'firebase';
 
-function AddKeywordsPage() {
+function AddKeywordsPage({ toggle }) {
 
     const [keywordTag, setKeywordTag] = useState([]);
     const [input, setInput] = useState('');
     const [feedInput, setFeedInput] = useState('');
+
+    const history = useHistory();
 
     useEffect(() => {
         db.collection('keywordTag').orderBy('timestamp', 'desc').onSnapshot((snapshot) =>
@@ -43,6 +45,7 @@ function AddKeywordsPage() {
             setFeedInput("");
             setKeywordTag([]);
             alert("Feed added successfully");
+            history.push("/feeds");
         }
 
     // const newFeed = () => {
@@ -56,7 +59,7 @@ function AddKeywordsPage() {
         
         <div className="addkeywordspage">
         <div>
-            <p className="addkeywordspage_keywords">Keywords</p>
+            <p className="addkeywordspage_keywords">Create Feed</p>
             <div className="addkeywordspage_feed">
             <TextField
                         value={feedInput}
@@ -103,7 +106,7 @@ function AddKeywordsPage() {
         </div>
         </div>
         <div className="add_feed_button">
-        <button onClick={addFeed}>Add Feed</button>
+        <button onClick={addFeed} >Add Feed</button>
 
         </div>
             

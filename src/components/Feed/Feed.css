@@ -1,5 +1,5 @@
 .feed {
-    margin-left: 250px;
+    margin-left: 230px;
     display: flex;
     width: 700px;
     margin-top: 40px;
@@ -7,15 +7,16 @@
     /* overflow: scroll; */
 }
 .feed_relevant {
-    font-size: 25px;
+    font-size: 20px;
     font-weight: 500;
     /* text-transform: uppercase; */
     margin-bottom: 10px;
 }
-.top_recommendations {
-    padding:  0 10px;
-    border: 2px solid green;
-}
-.all_feed {
-    padding: 0 10px;
+
+.today {
+    margin-top: 10px;
+    font-size: 20px;
+    font-weight: 500;
+    /* text-transform: uppercase; */
+    margin-bottom: 10px;
 }
