@@ -1,6 +1,6 @@
 .meme {
     width: 180px;
-    margin-left: 955px;
+    margin-left: 925px;
     margin-top: 40px;
     position: fixed;
 }
@@ -10,6 +10,6 @@
     margin-bottom: 40px;
 }
 .meme > img {
-    width: 185px;
+    width: 225px;
     border-radius: 20px;
 }

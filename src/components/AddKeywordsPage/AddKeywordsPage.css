@@ -10,7 +10,7 @@
     overflow-y: scroll;
     padding-right: 20px;
     margin-left: 20px;
-    box-shadow: 10px 10px whitesmoke;
+    /* box-shadow: 10px 10px whitesmoke; */
 }
 .addkeywordspage_keywords {
     font-size: 20px;
@@ -74,7 +74,8 @@
 }
 .add_feed_button {
     display: flex;
-    align-items: center;
+    margin-top: 20px;
+    margin-left: 220px;
 }
 .add_feed_button > button {
     margin-top: 30px;

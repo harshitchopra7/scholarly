@@ -20,7 +20,7 @@ function Feeds({ title, keyword }) {
                         <p className="feeds_keyword">{keyword}</p>
                     </div>
                     <div className="bookmark">
-                        <BookmarkBorderIcon id="bookmark_color" />
+                        <BookmarkBorderIcon id="bookmark_color" style={{color: "#012169"}} />
                     </div>
                 </div>
             <hr className="hr_feed" />

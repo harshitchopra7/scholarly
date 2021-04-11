@@ -7,10 +7,11 @@
     font-weight: 600;
     text-decoration: none;
     padding-bottom: 30px;
+    color: #012169;
 }
 .feeds_keyword {
     text-decoration: none;
-    color: #318CE7;
+    /* color: #318CE7; */
 }
 .text-decorationn {
     text-decoration: none;

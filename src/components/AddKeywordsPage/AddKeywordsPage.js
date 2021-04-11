@@ -87,10 +87,11 @@ function AddKeywordsPage({ toggle }) {
             <TextField
                         value={feedInput}
                         onChange={eve => setFeedInput(eve.target.value)}
-                        style={{ width: '300px' }}
+                        style={{ width: '300px'}}
                         id="outlined-basic"
                         label="Add Feed Name"
                         variant="outlined"
+                        InputLabelProps={{style: {fontSize: 15}}}
                     />
             </div>
 
@@ -104,6 +105,7 @@ function AddKeywordsPage({ toggle }) {
                         id="outlined-basic"
                         label="Add phrases"
                         variant="outlined"
+                        InputLabelProps={{style: {fontSize: 15}}}
                     />
                 </div>
                 <div className="addkeywordspage_button1">
@@ -125,15 +127,17 @@ function AddKeywordsPage({ toggle }) {
                 <AddedKeywords keyword="Metal organic frameworks" />
                 <AddedKeywords keyword="Adsorption" />
             </div> */}
-            <div>
+            {/* <div>
                 <Link className="addkeywordspage_button2" to="/feed"><button>Go to feed</button></Link>
-            </div>
-        </div>
-        </div>
-        <div className="add_feed_button">
-        <button onClick={addFeed} >Add Feed</button>
+                </div> */}
+                    <div className="add_feed_button">
+                <button onClick={addFeed} >Add Feed</button>
 
+                </div>
+            </div>
+        
         </div>
+        
             
         </div>
     )
