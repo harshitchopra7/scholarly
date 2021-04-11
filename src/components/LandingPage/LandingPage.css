@@ -1,3 +1,13 @@
+.landingpagee {
+    background: 
+    linear-gradient(to bottom right, white 50%, transparent 50.5%) no-repeat bottom,
+    /* bottom part */
+    linear-gradient(0deg, white, #318CE7) no-repeat top;
+  /* top portion */
+  color: white;
+  padding-bottom: 3em;
+  background-size: 100% 7em, 100% calc(100% - 7em)
+}
 .landingpage {
     margin: 0 150px;
     position: relative;
@@ -54,6 +64,7 @@
 
 
 .landingpage_top {
+    margin-top: -20px;
     font-size: 38px;
     font-weight: 700 !important;
     text-align: center;

@@ -57,20 +57,20 @@ function LandingPage() {
     // };
 
     return (
-        <div>
-            <div className="nav_main">
+        <div className="landingpagee">
+            <div className="nav_mainn">
                 <div className="navbar">
                     <div className="navbar_logo">
                         <p>Scholarlys</p>
                     </div>
                     <div className="navbar_login">
-                        <button onClick={toggle} className="navbar_button">
+                        <button onClick={toggle} className="navbar_button" style={{backgroundColor: 'white', color: '#318CE7'}}>
                             Login
                         </button>
                     </div>
                     {/* <hr className="hr" /> */}
                 </div>
-                <hr className="hr" />
+                {/* <hr className="hr" /> */}
             </div>
             <div className="landingpage">
                 <div className="landingp" id="blur">
