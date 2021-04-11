@@ -16,6 +16,7 @@ import { useSelector, useDispatch } from 'react-redux';
 import { login, selectUser } from './components/features/userSlice';
 import { auth } from './firebase';
 import video from './components/video/Scholarlys_Demo.mp4';
+import Bookmarks from './components/Bookmarks/Bookmarks';
 
 
 
@@ -105,6 +106,15 @@ function App() {
             <div className="align_divs">
               <LeftMenuBar />
               <ContentPage />
+              <Meme />
+            </div>
+          </Route>
+
+          <Route path="/bookmarks">
+            <Navbar />
+            <div className="align_divs">
+              <LeftMenuBar />
+              <Bookmarks />
               <Meme />
             </div>
           </Route>

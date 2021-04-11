@@ -16,6 +16,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    margin-bottom: 10px;
 }
 .leftmenubar_left_name > img {
     border-radius: 50%;
@@ -27,7 +28,7 @@
     font-size: 18px;
 }
 .leftmenubar_left_options {
-    margin-top: 50px;
+    margin-top: 5px;
 }
 .options_ {
     display: flex;
@@ -42,8 +43,12 @@
     margin-left: 10px;
     color: black;
 }
+.option_pf {
+    color: black;
+}
 .foo {
-    margin-top: 220px;
+    margin-top: 580px;
+    position: fixed;
 }
 
 #popuppp {
@@ -91,4 +96,9 @@
 }
 .login_google {
     margin-top: 50px;
+}
+.options_feed {
+    display: flex;
+    margin: 5px 0;
+    cursor: pointer;
 }

@@ -1,0 +1,7 @@
+.feed_created {
+    display: flex;
+    align-items: center;
+}
+.edit_button {
+    margin-left: 50px;
+}

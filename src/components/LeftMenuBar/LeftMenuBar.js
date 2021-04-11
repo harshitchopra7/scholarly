@@ -13,6 +13,10 @@ import { useDispatch } from 'react-redux';
 import AddCircleOutlineIcon from '@material-ui/icons/AddCircleOutline';
 import BookmarkBorderIcon from '@material-ui/icons/BookmarkBorder';
 import AddKeywordsPage from '../AddKeywordsPage/AddKeywordsPage';
+import ArrowForwardIosIcon from '@material-ui/icons/ArrowForwardIos';
+import FeedCreated from './FeedCreated';
+import { db } from '../../firebase';
+import firebase from 'firebase';
 
 function LeftMenuBar() {
 
@@ -33,8 +37,22 @@ function LeftMenuBar() {
         popuppp.classList.toggle('active');
     }
 
-    // console.log(user.photoUrl);
-    // console.log(user.displayName);
+    var feedRef = db.collection('feeds').doc("F24yYRUXsz1nToRmJdCq");
+
+    feedRef.get().then((doc) => {
+        if (doc.exists) {
+            console.log("Document data:", doc.data());
+        } else {
+            // doc.data() will be undefined in this case
+            console.log("No such document!");
+        }
+    }).catch((error) => {
+        console.log("Error getting document:", error);
+    });
+
+    console.log(user.photoUrl);
+    console.log(user.displayName);
+    console.log(user.uid);
 
 
     return (
@@ -49,6 +67,14 @@ function LeftMenuBar() {
                     {/* <Avatar src='' alt="" />
                     <p>Harshit Chopra</p> */}
                 </div>
+
+                <p className="options_feed">
+                    <p className="option_pf"><FeedCreated /></p>
+                </p>
+                <p className="options_feed">
+                    <p className="option_pf"><FeedCreated /></p>
+                </p>
+
                 <div className="leftmenubar_left_options">
                     <p onClick={toggle} className="text-decoration" className="options_">
                         <AddCircleOutlineIcon style={{color: "#318CE7"}} />
@@ -58,7 +84,7 @@ function LeftMenuBar() {
                     </p>
                     <p className="options_">
                         <BookmarkBorderIcon style={{color: "#318CE7"}} />
-                        <Link className="text-decoration" to="/add-keywords-page">
+                        <Link className="text-decoration" to="/bookmarks">
                             <p className="option_p">Bookmarks</p>
                         </Link>
                     </p>

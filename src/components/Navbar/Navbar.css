@@ -16,7 +16,8 @@
 }
 .navbar_logo > p {
     font-size: 40px;
-    font-weight: 500 !important;
+    color: #0a2351;
+    font-weight: 700 !important;
     font-family: 'Architects Daughter', cursive !important;
 }
 .navbar_login {

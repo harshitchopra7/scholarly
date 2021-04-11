@@ -7,18 +7,36 @@ import { Link, useHistory } from 'react-router-dom';
 
 import { db } from '../../firebase';
 import firebase from 'firebase';
+import FeedCreated from '../LeftMenuBar/FeedCreated';
+import { useSelector } from 'react-redux';
+import { selectUser } from '../features/userSlice';
 
 function AddKeywordsPage({ toggle }) {
 
-    const [keywordTag, setKeywordTag] = useState([]);
+    const [keywords, setKeywords] = useState([]);
     const [input, setInput] = useState('');
     const [feedInput, setFeedInput] = useState('');
 
     const history = useHistory();
 
+    const user = useSelector(selectUser);
+
+    // useEffect(() => {
+    //     db.collection('keywords').orderBy('timestamp', 'desc').onSnapshot((snapshot) =>
+    //         setKeywords(
+    //             snapshot.docs.map((doc) => (
+    //                 {
+    //                     id: doc.id,
+    //                     data: doc.data()
+    //                 }
+    //             ))
+    //         ))
+    // }, [])
+    
     useEffect(() => {
-        db.collection('keywordTag').orderBy('timestamp', 'desc').onSnapshot((snapshot) =>
-            setKeywordTag(
+
+        db.collection('keywords').orderBy('timestamp', 'desc').onSnapshot((snapshot) =>
+            setKeywords(
                 snapshot.docs.map((doc) => (
                     {
                         id: doc.id,
@@ -29,9 +47,9 @@ function AddKeywordsPage({ toggle }) {
     }, [])
 
     const addKeywordTag = (e) => {
-        e.preventDefault();
+        // e.preventDefault();
 
-        db.collection('keywordTag').add({
+        db.collection('keywords').add({
             keyword: input,
             timestamp: firebase.firestore.FieldValue.serverTimestamp()
         });
@@ -41,11 +59,16 @@ function AddKeywordsPage({ toggle }) {
 
         const addFeed = (eve) => {
             eve.preventDefault();
+
+            db.collection('feeds').add({
+                feed: feedInput,
+                timestamp: firebase.firestore.FieldValue.serverTimestamp()
+            });
+
             console.log(setFeedInput);
             setFeedInput("");
-            setKeywordTag([]);
+            setKeywords([]);
             alert("Feed added successfully");
-            history.push("/feeds");
         }
 
     // const newFeed = () => {
@@ -88,13 +111,15 @@ function AddKeywordsPage({ toggle }) {
                 </div>
             </div>
             <div className="over">
-                {keywordTag.map(({ id, data: { keyword } }) => (
+                {keywords.map(({ id, data: { keyword } }) => (
                     <AddedKeywords
-                        key={id}
+                        id={id}
                         keyword={keyword}
                     />
                 ))}
             </div>
+
+            
 
             {/* <div>
                 <AddedKeywords keyword="Metal organic frameworks" />
